@@ -58,8 +58,9 @@ class SmsService {
           }
         });
       }
-    } catch (error) {
-      console.error('Error listening for OTP:', error);
+    } catch {
+      // SMS auto-read not available (emulator or permissions denied)
+      // Fail silently - user can manually enter OTP
     }
   }
 

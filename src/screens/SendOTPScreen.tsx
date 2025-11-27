@@ -59,11 +59,11 @@ const SendOTPScreen: React.FC<Props> = ({navigation}) => {
       console.log('Send OTP Response:', response);
       setLoading(false);
       
-      if (response.success) {
+      if (response.status === 'success' && response.data && response.data[0]?.otpSent) {
         // Navigate to Verify OTP screen
         navigation.navigate('VerifyOTP', {mobile});
       } else {
-        setError(response.message || 'Failed to send OTP. Please try again.');
+        setError(response.msg || 'Failed to send OTP. Please try again.');
       }
     } catch (err) {
       setLoading(false);

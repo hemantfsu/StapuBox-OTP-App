@@ -57,10 +57,10 @@ const VerifyOTPScreen: React.FC<Props> = ({navigation, route}) => {
       console.log('Verify OTP Response:', response);
       setLoading(false);
 
-      if (response.success) {
+      if (response.status === 'success') {
         navigation.replace('Success');
       } else {
-        setError(response.message || 'Invalid OTP. Please try again.');
+        setError(response.msg || 'Invalid OTP. Please try again.');
         setOtp(['', '', '', '']);
         inputRefs.current[0]?.focus();
       }
@@ -173,7 +173,7 @@ const VerifyOTPScreen: React.FC<Props> = ({navigation, route}) => {
       const response = await apiService.resendOTP(mobile);
       setResendLoading(false);
 
-      if (response.success) {
+      if (response.status === 'success' && response.data && response.data[0]?.otpSent) {
         setResendTimer(OTP_CONFIG.RESEND_TIMEOUT);
         setCanResend(false);
         setOtp(['', '', '', '']);
@@ -190,7 +190,7 @@ const VerifyOTPScreen: React.FC<Props> = ({navigation, route}) => {
           });
         }, 1000);
       } else {
-        setError(response.message || 'Failed to resend OTP. Please try again.');
+        setError(response.msg || 'Failed to resend OTP. Please try again.');
       }
     } catch (err) {
       setResendLoading(false);
