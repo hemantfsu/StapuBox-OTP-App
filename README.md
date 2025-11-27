@@ -68,8 +68,7 @@ StapuBoxApp/
 │   │   ├── colors.ts              # Color palette
 │   │   └── config.ts              # App configuration
 │   └── utils/                     # Utility functions
-├── android/                       # Android native code
-└── ios/                          # iOS native code
+└── android/                       # Android native code
 ```
 
 ## 🚀 Setup Instructions
@@ -78,7 +77,7 @@ StapuBoxApp/
 
 - Node.js >= 20
 - npm or yarn
-- Android Studio (for Android development)
+- Android Studio
 - **JDK 17** (Required - not compatible with newer versions)
 - Android SDK
 
