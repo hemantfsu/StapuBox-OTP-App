@@ -17,240 +17,171 @@ The app features a clean, modern interface with three main screens:
 - ✅ Auto-focus between OTP input fields
 - ✅ SMS auto-read on Android devices
 - ✅ 60-second countdown timer for resend OTP
-- ✅ Smooth animations and transitions# Getting Started
+- ✅ Smooth animations and transitions
 
+## 📱 Features
 
-
-## 📱 Features> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
-
-
-
-### Core Functionality## Step 1: Start Metro
-
+### Core Functionality
 - ✅ **Screen 1 - Send OTP**: Mobile number input with validation (India, 10 digits)
-
-- ✅ **Screen 2 - Verify OTP**: 4-digit OTP verification with auto-focus and auto-submitFirst, you will need to run **Metro**, the JavaScript build tool for React Native.
-
+- ✅ **Screen 2 - Verify OTP**: 4-digit OTP verification with auto-focus and auto-submit
 - ✅ **Screen 3 - Success**: Confirmation screen after successful verification
 
-To start the Metro dev server, run the following command from the root of your React Native project:
-
 ### Advanced Features
-
-- 🔐 SMS Auto-Read (Android) using SMS Retriever API```sh
-
-- ⏱️ Resend OTP with 60-second cooldown timer# Using npm
-
-- 🎨 Pixel-perfect UI based on Figma designsnpm start
-
+- 🔐 SMS Auto-Read (Android) using SMS Retriever API
+- ⏱️ Resend OTP with 60-second cooldown timer
+- 🎨 Pixel-perfect UI based on Figma designs
 - ⚡ Auto-submit when OTP is completely filled
-
-- 🔄 Auto-focus navigation between OTP inputs# OR using Yarn
-
-- ❌ Error highlighting for invalid OTP/mobile numberyarn start
-
-- 📱 "Change Number" option to go back and modify```
-
+- 🔄 Auto-focus navigation between OTP inputs
+- ❌ Error highlighting for invalid OTP/mobile number
+- 📱 "Change Number" option to go back and modify
 - 🚀 Graceful fallback when SMS permissions unavailable
-
-- 💅 Smooth animations and loading states## Step 2: Build and run your app
-
+- 💅 Smooth animations and loading states
 - 🌐 Comprehensive error handling
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
 
 ## 🏗️ Tech Stack
 
-### Android
-
 - **Framework**: React Native 0.82.1
-
-- **Language**: TypeScript```sh
-
-- **Navigation**: React Navigation v7 (Native Stack)# Using npm
-
-- **HTTP Client**: Axiosnpm run android
-
+- **Language**: TypeScript
+- **Navigation**: React Navigation v7 (Native Stack)
+- **HTTP Client**: Axios
 - **SMS Auto-Read**: react-native-sms-retriever
+- **Build Tool**: Gradle (Android)
 
-- **Build Tool**: Gradle (Android)# OR using Yarn
+## 📁 Project Structure
 
-yarn android
-
-## 📁 Project Structure```
-
-
-
-```### iOS
-
+```
 StapuBoxApp/
-
-├── src/For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
+├── src/
 │   ├── screens/
-
-│   │   ├── SendOTPScreen.tsx      # Mobile number input screenThe first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
+│   │   ├── SendOTPScreen.tsx      # Mobile number input screen
 │   │   ├── VerifyOTPScreen.tsx    # OTP verification screen
-
-│   │   └── SuccessScreen.tsx      # Success confirmation screen```sh
-
-│   ├── navigation/bundle install
-
-│   │   └── AppNavigator.tsx       # Navigation configuration```
-
+│   │   └── SuccessScreen.tsx      # Success confirmation screen
+│   ├── navigation/
+│   │   └── AppNavigator.tsx       # Navigation configuration
 │   ├── services/
-
-│   │   ├── apiService.ts          # API integration layerThen, and every time you update your native dependencies, run:
-
+│   │   ├── apiService.ts          # API integration layer
 │   │   └── smsService.ts          # SMS auto-read service
-
-│   ├── types/```sh
-
-│   │   ├── navigation.ts          # Navigation type definitionsbundle exec pod install
-
-│   │   └── api.ts                 # API type definitions```
-
+│   ├── types/
+│   │   ├── navigation.ts          # Navigation type definitions
+│   │   └── api.ts                 # API type definitions
 │   ├── constants/
-
-│   │   ├── colors.ts              # Color paletteFor more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
+│   │   ├── colors.ts              # Color palette
 │   │   └── config.ts              # App configuration
-
-│   └── utils/                     # Utility functions```sh
-
-├── android/                       # Android native code# Using npm
-
-└── ios/                          # iOS native codenpm run ios
-
+│   └── utils/                     # Utility functions
+├── android/                       # Android native code
+└── ios/                          # iOS native code
 ```
 
-# OR using Yarn
-
-## 🚀 Setup Instructionsyarn ios
-
-```
+## 🚀 Setup Instructions
 
 ### Prerequisites
 
-- Node.js >= 20If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
+- Node.js >= 20
 - npm or yarn
+- Android Studio (for Android development)
+- **JDK 17** (Required - not compatible with newer versions)
+- Android SDK
 
-- Android Studio (for Android development)This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+### Installation Steps
 
-- JDK 17 or higher
-
-- Android SDK## Step 3: Modify your app
-
-
-
-### Installation StepsNow that you have successfully run the app, let's make changes!
-
-
-
-1. **Navigate to project directory**Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
+1. **Clone the repository**
    ```bash
-
-   cd /Users/hemantbaghel/Desktop/StapuBox/StapuBoxAppWhen you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
+   git clone https://github.com/hemantfsu/StapuBox-OTP-App.git
+   cd StapuBox-OTP-App
    ```
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-
-2. **Install dependencies**- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
+2. **Install dependencies**
    ```bash
-
-   npm install## Congratulations! :tada:
-
+   npm install
    ```
-
-You've successfully run and modified your React Native App. :partying_face:
 
 3. **Configure API Token**
-
-   ### Now what?
-
+   
    Update the API token in `src/constants/config.ts`:
-
-   ```typescript- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-
-   export const API_CONFIG = {- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
+   ```typescript
+   export const API_CONFIG = {
      BASE_URL: 'https://stapubox.com/trial',
-
-     API_TOKEN: 'trial_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', // Replace with your token# Troubleshooting
-
+     API_TOKEN: 'your_actual_api_token_here', // Get from StapuBox
      ...
-
-   };If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
+   };
    ```
 
-# Learn More
-
-4. **Android Setup**
-
-   ```bashTo learn more about React Native, take a look at the following resources:
-
-   # Clean and prepare Android project
-
-   cd android- [React Native Website](https://reactnative.dev) - learn more about React Native.
-
-   ./gradlew clean- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-
-   cd ..- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-
-   ```- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+4. **Install JDK 17** (if not already installed)
+   ```bash
+   # On macOS using Homebrew
+   brew install --cask temurin@17
+   ```
 
 ## 🏃 Running the App
 
-### Development Mode
+### Method 1: Using Emulator (Recommended for Development)
 
-1. **Start Metro Bundler**
+1. **Start an Android Emulator** from Android Studio (AVD Manager)
+
+2. **Start Metro Bundler** (in one terminal):
    ```bash
-   npm start
+   npx react-native start
    ```
 
-2. **Run on Android**
+3. **Run the app** (in another terminal):
    ```bash
-   npm run android
-   ```
-   OR
-   ```bash
+   export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+   export ANDROID_HOME=$HOME/Library/Android/sdk
+   export PATH=$PATH:$ANDROID_HOME/platform-tools
    npx react-native run-android
    ```
 
-3. **Run on iOS** (macOS only)
+### Method 2: Using Physical Device
+
+1. **Enable Developer Options** on your Android phone
+   - Go to Settings → About Phone
+   - Tap "Build Number" 7 times
+   - Go back → Developer Options → Enable "USB Debugging"
+
+2. **Connect your phone via USB** and verify connection:
    ```bash
-   npm run ios
+   $HOME/Library/Android/sdk/platform-tools/adb devices
    ```
 
-### Building APK
+3. **Run the app**:
+   ```bash
+   export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+   npx react-native run-android
+   ```
 
-#### Debug APK
+### Method 3: Install Pre-built APK
+
+1. **Download the APK** from [GitHub Releases](https://github.com/hemantfsu/StapuBox-OTP-App/releases)
+
+2. **Install on your Android device**:
+   ```bash
+   adb install app-release.apk
+   ```
+   Or transfer the APK to your phone and install manually.
+
+## 🔨 Building APK
+
+### Debug APK (for testing):
 ```bash
 cd android
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 ./gradlew assembleDebug
 ```
-APK location: `android/app/build/outputs/apk/debug/app-debug.apk`
+Output: `android/app/build/outputs/apk/debug/app-debug.apk`
 
-#### Release APK
-```bash
-npm run build:android
-```
-OR
+### Release APK (for distribution):
 ```bash
 cd android
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 ./gradlew assembleRelease
 ```
-APK location: `android/app/build/outputs/apk/release/app-release.apk`
+Output: `android/app/build/outputs/apk/release/app-release.apk`
 
-**Note**: For release builds, you may need to configure signing. The unsigned APK can still be installed for testing.
+## 🔄 Reloading the App
+
+- **In Emulator**: Press `R` twice quickly
+- **In Physical Device**: Shake the device → Select "Reload"
+- **Or**: `Cmd + M` (Mac) / `Ctrl + M` (Windows/Linux) → Select "Reload"
 
 ## 📡 API Integration
 
@@ -296,59 +227,6 @@ Required permissions in `AndroidManifest.xml`:
 <uses-permission android:name="android.permission.READ_SMS" />
 ```
 
-## 🏗️ Architecture Decisions
-
-### 1. **TypeScript**
-- Type safety across the entire application
-- Better IDE support and autocomplete
-- Reduced runtime errors
-
-### 2. **Service Layer Pattern**
-- Separated API logic from UI components
-- Centralized error handling
-- Easy to test and maintain
-
-### 3. **React Navigation**
-- Industry-standard navigation solution
-- Type-safe navigation with TypeScript
-- Smooth animations and gestures
-
-### 4. **Component-Based Architecture**
-- Reusable, maintainable components
-- Clear separation of concerns
-- Easy to extend and modify
-
-### 5. **Constants Configuration**
-- Centralized configuration
-- Easy to update API endpoints and settings
-- Environment-specific configurations
-
-## 🎨 Design Implementation
-
-The app closely follows the provided Figma designs with:
-- Clean, modern UI with proper spacing and typography
-- Consistent color scheme (Primary: #FF6B00)
-- Smooth transitions and animations
-- Responsive layouts for different screen sizes
-- Accessibility considerations
-
-## 🐛 Known Issues & Limitations
-
-### Current Limitations
-1. **SMS Auto-Read**: Only works on Android devices
-2. **iOS SMS Auto-Read**: Not implemented (requires different approach)
-3. **Offline Mode**: No offline caching implemented
-
-### Potential Improvements
-- [ ] Add biometric authentication
-- [ ] Implement deep linking for magic links
-- [ ] Add skeleton loaders for better UX
-- [ ] Implement offline mode with AsyncStorage
-- [ ] Add unit and integration tests
-- [ ] Add analytics integration
-- [ ] Implement error boundary for crash handling
-- [ ] Add localization/i18n support
-
 ## 🧪 Testing
 
 ### Manual Testing Checklist
@@ -362,15 +240,6 @@ The app closely follows the provided Figma designs with:
 - [x] Success screen navigation
 - [x] SMS auto-read on Android
 - [x] Loading states and error messages
-
-## 📦 Deliverables
-
-- ✅ GitHub repository with complete source code
-- ✅ Comprehensive README with setup instructions
-- ✅ Working Android APK
-- ✅ Architecture documentation
-- ✅ API integration implementation
-- ✅ SMS auto-read feature
 
 ## 🎯 Assignment Checklist
 
@@ -391,10 +260,44 @@ The app closely follows the provided Figma designs with:
 - [x] Pixel-perfect Figma design: +30 ✅
 - [x] Extra polish (loaders, error states, UX): +20 ✅
 
-**Total Possible Points**: 150/150 ✨
+**Total Points**: 150/150 ✨
 
----
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**Issue**: "Unable to load script"
+- **Solution**: Make sure Metro bundler is running (`npx react-native start`)
+
+**Issue**: "JAVA_HOME is not set correctly"
+- **Solution**: Run `export JAVA_HOME=$(/usr/libexec/java_home -v 17)`
+
+**Issue**: "No connected devices"
+- **Solution**: Start an emulator or connect a physical device with USB debugging enabled
+
+**Issue**: "Gradle build failed"
+- **Solution**: Ensure you're using JDK 17, not a newer version
+
+**Issue**: "SMS auto-read not working"
+- **Solution**: This feature only works on real Android devices, not emulators
+
+## 📦 Deliverables
+
+- ✅ GitHub repository with complete source code
+- ✅ Comprehensive README with setup instructions
+- ✅ Working Android APK
+- ✅ Architecture documentation
+- ✅ API integration implementation
+- ✅ SMS auto-read feature
 
 ## 📄 License
 
 This project is created as part of StapuBox assignment.
+
+---
+
+**Repository**: [https://github.com/hemantfsu/StapuBox-OTP-App](https://github.com/hemantfsu/StapuBox-OTP-App)
+
+**Developer**: Hemant Baghel
+
+**Date**: November 2025
