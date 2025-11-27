@@ -1,8 +1,23 @@
-# StapuBox - OTP Login AppThis is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# StapuBox - OTP Login App
 
+A React Native mobile application implementing a secure 3-screen OTP authentication flow with SMS auto-read functionality for Android.
 
+## 📸 App Screenshots
 
-A React Native mobile application implementing a secure 3-screen OTP authentication flow with SMS auto-read functionality for Android.# Getting Started
+The app features a clean, modern interface with three main screens:
+
+| Send OTP Screen | Verify OTP Screen | Success Screen |
+|:---:|:---:|:---:|
+| Enter 10-digit mobile number | Auto-read or manually enter 4-digit OTP | Login confirmation |
+| ![Screen 1](screenshots/screen1.png) | ![Screen 2](screenshots/screen2.png) | ![Screen 3](screenshots/screen3.png) |
+
+### 🎯 Key Features Shown
+- ✅ Clean, pixel-perfect UI matching Figma designs
+- ✅ Real-time validation with error highlighting
+- ✅ Auto-focus between OTP input fields
+- ✅ SMS auto-read on Android devices
+- ✅ 60-second countdown timer for resend OTP
+- ✅ Smooth animations and transitions# Getting Started
 
 
 
